@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="android-chrome-512x512.png">
+    <meta name="google-site-verification" content="vqq11CWNVkLVnZvjCeZReKc8-FRmgxek2SOWjr35CbY" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Binary Encoding Visualization | binary-encoding-visualization</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Binary Encoding Visualization" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A simple Python GUI application for visualizing different binary encoding schemes. Supports Unipolar, Polar NRZ-L, Polar NRZ-I, Polar RZ, Biphase Manchester, Differential Manchester, and AMI encoding methods." />
+<meta property="og:description" content="A simple Python GUI application for visualizing different binary encoding schemes. Supports Unipolar, Polar NRZ-L, Polar NRZ-I, Polar RZ, Biphase Manchester, Differential Manchester, and AMI encoding methods." />
+<link rel="canonical" href="https://esmail-sarhadi.github.io/binary-encoding-visualization/" />
+<meta property="og:url" content="https://esmail-sarhadi.github.io/binary-encoding-visualization/" />
+<meta property="og:site_name" content="binary-encoding-visualization" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binary Encoding Visualization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"A simple Python GUI application for visualizing different binary encoding schemes. Supports Unipolar, Polar NRZ-L, Polar NRZ-I, Polar RZ, Biphase Manchester, Differential Manchester, and AMI encoding methods.","headline":"Binary Encoding Visualization","name":"binary-encoding-visualization","url":"https://esmail-sarhadi.github.io/binary-encoding-visualization/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/binary-encoding-visualization/assets/css/style.css?v=f3f889b19acfc6db130649fefc5d4f5576df7aca">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/binary-encoding-visualization/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://esmail-sarhadi.github.io/binary-encoding-visualization/">binary-encoding-visualization</a></h1>
+      
+
+      
+<h1 id="binary-encoding-visualization">Binary Encoding Visualization</h1>
+
+<p>This project is a Python GUI application designed to visualize various binary encoding schemes. It allows users to input a binary sequence and choose an encoding method to generate a visual representation of the encoded signal.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li><strong>Unipolar Encoding</strong></li>
+  <li><strong>Polar NRZ-L Encoding</strong></li>
+  <li><strong>Polar NRZ-I Encoding</strong></li>
+  <li><strong>Polar RZ Encoding</strong></li>
+  <li><strong>Biphase Manchester Encoding</strong></li>
+  <li><strong>Differential Manchester Encoding</strong></li>
+  <li><strong>AMI (Alternate Mark Inversion) Encoding</strong></li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li>Python 3.x</li>
+  <li>NumPy</li>
+  <li>Matplotlib</li>
+  <li>Tkinter</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+  <li>Clone the repository:</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/yourusername/binary-encoding-visualization.git
+<span class="nb">cd </span>binary-encoding-visualization
+</code></pre></div></div>
+
+<ol>
+  <li>Install the required Python packages:</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>numpy matplotlib
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Run the script to launch the GUI:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python main.py
+</code></pre></div></div>
+
+<ol>
+  <li>Enter a binary sequence in the input field.</li>
+  <li>Select an encoding method from the dropdown menu.</li>
+  <li>Click the “Encode” button to generate and display the encoded signal.</li>
+</ol>
+
+<h2 id="screenshot">Screenshot</h2>
+
+<p><img src="/binary-encoding-visualization/Images/1.png" alt="Screenshot of the Binary Encoding Visualization GUI" />
+<img src="/binary-encoding-visualization/Images/2.png" alt="Screenshot of the Binary Encoding Visualization GUI" />
+<img src="/binary-encoding-visualization/Images/3.png" alt="Screenshot of the Binary Encoding Visualization GUI" /></p>
+
+<h2 id="encoding-methods">Encoding Methods</h2>
+
+<ul>
+  <li><strong>Unipolar</strong>: Represents binary <code class="language-plaintext highlighter-rouge">1</code> as high and <code class="language-plaintext highlighter-rouge">0</code> as low.</li>
+  <li><strong>Polar NRZ-L</strong>: Non-return-to-zero level encoding; <code class="language-plaintext highlighter-rouge">1</code> is high and <code class="language-plaintext highlighter-rouge">0</code> is low.</li>
+  <li><strong>Polar NRZ-I</strong>: Non-return-to-zero inverted encoding; <code class="language-plaintext highlighter-rouge">1</code> causes a transition, <code class="language-plaintext highlighter-rouge">0</code> does not.</li>
+  <li><strong>Polar RZ</strong>: Return-to-zero encoding; each bit returns to zero in the middle of the bit period.</li>
+  <li><strong>Biphase Manchester</strong>: Each bit is represented by a transition in the middle of the bit period; <code class="language-plaintext highlighter-rouge">0</code> is low-to-high, <code class="language-plaintext highlighter-rouge">1</code> is high-to-low.</li>
+  <li><strong>Differential Manchester</strong>: Each bit is represented by a transition in the middle; <code class="language-plaintext highlighter-rouge">0</code> is no transition at the beginning of the bit period, <code class="language-plaintext highlighter-rouge">1</code> is a transition.</li>
+  <li><strong>AMI (Alternate Mark Inversion)</strong>: <code class="language-plaintext highlighter-rouge">0</code> is represented by no line signal, <code class="language-plaintext highlighter-rouge">1</code> alternates between positive and negative voltages.</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>This project is licensed under the MIT License. See the <a href="/binary-encoding-visualization/LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions are welcome! Please open an issue or submit a pull request.</p>
+<h2 id="profile">Profile</h2>
+
+<p>Check out my GitHub profile: <a href="https://github.com/Esmail-sarhadi" target="_blank">Esmail Sarhadi</a></p>
+
+<h2 id="project-link">Project Link</h2>
+
+<p>View this project on GitHub: <a href="https://github.com/Esmail-sarhadi/binary-encoding-visualization" target="_blank">binary-encoding-visualization</a></p>
+
+<h2 id="donation">Donation</h2>
+
+<p>If you find this project helpful, consider making a donation:</p>
+<p><a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&source=lk_donation&medium=referral" target="_blank">
+     <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
+</a></p>
+      
+<h2 id="author">Author</h2>
+
+<p><a href="https://github.com/esmail-sarhadi">Esmail Sarhadi</a></p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<ul>
+  <li>Thanks to the developers of NumPy, Matplotlib, and Tkinter for their excellent libraries.</li>
+</ul>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/Esmail-sarhadi/binary-encoding-visualization/edit/main/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
